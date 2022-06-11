@@ -1,4 +1,3 @@
-<h1>Recipe:</h1>
 <div class="container">
   <div class='recipe-box'>
     <h3><%= @recipe.title %></h3>
@@ -9,7 +8,7 @@
     <em><%= "Tags: #{@recipe.tags.collect(&:name).join(', ')}" if @recipe.fields.key?(:tags) %></em>
   </div>
 </div>
-<button onclick="goBack()">Back to main</button>
+<button class="back-button" onclick="goBack()">Back to main</button>
 
 <script>
   function goBack() {
