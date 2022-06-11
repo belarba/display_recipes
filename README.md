@@ -4,7 +4,7 @@ This is a simple test project, accessing a Contentful API and displaying the inf
 
 I'm using **Ruby 3.0.3** and **Rails 7.0.3**
 
-***This project requires a ENV file, with the contentful credentials***
+***This project requires a ENV file into root folder, with the contentful credentials***
 
 # Clone and run 
 
