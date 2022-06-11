@@ -1,4 +1,10 @@
 <div class="container">
+  <% if @recipe.nil? %>
+    <div class='recipe-box'>
+      <p>Sorry, recipe not found ☹️​</p>
+      <p>Let's try other!​</p>
+    </div>
+  <% else %>
   <div class='recipe-box'>
     <h3><%= @recipe.title %></h3>
     <label><%= "By #{@recipe.chef.name}" if @recipe.fields.key?(:chef) %></label>
@@ -7,11 +13,6 @@
     <p><%= markdown(@recipe.description) %></p>
     <em><%= "Tags: #{@recipe.tags.collect(&:name).join(', ')}" if @recipe.fields.key?(:tags) %></em>
   </div>
+  <% end %>
 </div>
-<button class="back-button" onclick="goBack()">Back to main</button>
-
-<script>
-  function goBack() {
-    window.history.back();
-  }
-</script>
+<%= link_to "Back to Start", root_path, class: "back-button" %>

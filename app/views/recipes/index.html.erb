@@ -1,5 +1,10 @@
 <h1>.: OUR AMAZING RECIPES 🍲​​:.</h1>
 <div class="container">
+  <% if @recipes.nil? %>
+    <div class='recipe-index'>
+      <p>Sorry, no recipes today ☹️​</p>
+    </div>
+  <% end %>
   <% @recipes.each do |recipe| %>
     <div class='recipe-index'>
       <a class='recipe-tile' href="<%= recipe_path(recipe.id) %>">

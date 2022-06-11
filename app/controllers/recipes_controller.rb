@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-  before_action :fetch_data
-  def index;end
+  before_action :recipes
+  def index; end
 
   def show
     @recipe = @recipes.find { |r| r.id == params[:id] }
@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
 
   private
 
-  def fetch_data
-    @recipes = Recipes.call
+  def recipes
+    @recipes ||= Recipes.call
   end
 end
