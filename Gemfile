@@ -5,6 +5,7 @@ ruby "3.0.3"
 
 gem 'contentful'
 gem 'dotenv-rails'
+gem 'redcarpet'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"

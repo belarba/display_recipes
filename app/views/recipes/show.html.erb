@@ -5,7 +5,7 @@
     <label><%= "By #{@recipe.chef.name}" if @recipe.fields.key?(:chef) %></label>
 
     <img class='recipe-image' src="<%= @recipe.photo.url %>" />
-    <p><%= @recipe.description %></p>
+    <p><%= markdown(@recipe.description) %></p>
     <em><%= "Tags: #{@recipe.tags.collect(&:name).join(', ')}" if @recipe.fields.key?(:tags) %></em>
   </div>
 </div>
