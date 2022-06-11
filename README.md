@@ -41,6 +41,7 @@ rails test
 
 Things I should improve for the future
 
+- Contentful: How to properly handle errors when using it
 - Contentful: Go deeper on it documentation, to properly use it - specially when trying to fetch a specif item from it
 - Tests: Create a factory to simulate the response of the API, to not really fetch data from it when testing
 
