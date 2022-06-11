@@ -13,8 +13,9 @@ To run this, first you need to clone this repo
 git clone git@github.com:belarba/display_recipes.git
 ```
 
-Then install it's dependencies
+Then entenr the folder and install it's dependencies
 ```
+cd display_recipes
 bundle install
 ```
 
